@@ -43,3 +43,9 @@ RIGHT JOIN alunos ON matriculas.aluno_id = alunos.id;
 SELECT alunos.nome, matriculas.curso
 FROM alunos
 INNER JOIN matriculas ON alunos.id = matriculas.aluno_id;
+SELECT autores.nome, COUNT(livros.id) AS total_livros_publicados
+FROM autores
+LEFT JOIN livros ON autores.id = livros.autor_id
+GROUP BY autores.nome
+ORDER BY total_livros_publicados DESC
+LIMIT 1;
