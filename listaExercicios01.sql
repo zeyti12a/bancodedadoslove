@@ -63,3 +63,13 @@ FROM vendas
 GROUP BY produto
 ORDER BY quantidade_de_transacoes DESC
 LIMIT 1;
+
+atividade 2 
+
+DELIMITER //
+CREATE PROCEDURE sp_ListarAutores()
+BEGIN
+    SELECT * FROM Autor;
+END //
+DELIMITER ;
+
